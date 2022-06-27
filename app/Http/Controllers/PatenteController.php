@@ -21,6 +21,11 @@ class PatenteController extends Controller
         $aReqData["message"]   = "";
         $aReqData["response"]  = [];
         
+        if(!isset($request->patent)){
+            $aReqData["message"]   = "Sin Patente";
+            return response()->json($aReqData, 404);
+        }
+
         try{
             $vehiculo = Vehiculo::select([
                                             'patente',
