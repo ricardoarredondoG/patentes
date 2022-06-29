@@ -20,7 +20,7 @@ class LogBeforeAfterMiddleware
     public function handle($request, Closure $next)
     {
         $log = new LogBeforeAfter;
-        $log->ip = $request->ip();
+        $log->ip = $request->header('X-Forwarded-For');
         $log->ruta= $request->path();
         $log->request = json_encode($request->all());
         $log->microtimes = (float)(microtime(true));
