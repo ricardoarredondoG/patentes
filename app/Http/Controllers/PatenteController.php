@@ -48,8 +48,8 @@ class PatenteController extends Controller
                                         ->get();
         }catch(Exception $e){
             $aReqData["message"]   = "Error no controlado";
-            Log::channel("getDataByPatent")->error("Error en la linea: ".$request->getLine());
-            Log::channel("getDataByPatent")->error("Mensaje: ".$request->getMessage());
+            Log::channel("getDataByPatent")->error("Error en la linea: ".$e->getLine());
+            Log::channel("getDataByPatent")->error("Mensaje: ".$e->getMessage());
             return response()->json($aReqData, 500);
         }
 
@@ -126,8 +126,8 @@ class PatenteController extends Controller
 
         }catch(Exception $e){
             $aReqData["message"]   = "Error no controlado";
-            Log::channel("sendPatentByEmail")->error("Error en la linea: ".$request->getLine());
-            Log::channel("sendPatentByEmail")->error("Mensaje: ".$request->getMessage());
+            Log::channel("sendPatentByEmail")->error("Error en la linea: ".$e->getLine());
+            Log::channel("sendPatentByEmail")->error("Mensaje: ".$e->getMessage());
             Log::channel("sendPatentByEmail")->info("Fin Enviar Correo Electronico REST por patente");
             return response()->json($aReqData, 500);
         }
