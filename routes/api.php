@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('getDataByPatent', [PatenteController::class, 'getDataByPatent'])->middleware('LogBeforeAfterMiddleware');
+
+Route::post('sendEmailByPatent', [PatenteController::class, 'sendPatentByEmail'])->middleware('LogBeforeAfterMiddleware');
