@@ -95,7 +95,7 @@
 												<th class="column-top" width="145" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
 													<table width="100%" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="https://chilepatentes.com/images/logo.png" border="0" alt="" /></td>
+															<td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="https://api.chilepatentes.com/images/logo.png" border="0" alt="" /></td>
 														</tr>
 													</table>
 												</th>
@@ -117,7 +117,7 @@
 												<td class="tbrr p30-15" style="padding: 60px 30px; border-radius:26px 26px 0px 0px;" bgcolor="#12325c">
 													<table width="100%" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td class="h1 pb25" style="color:#ffffff; font-family:'Helvetica', Arial,sans-serif; font-size:50px; line-height:46px; text-align:center; padding:25px;  border: white 3px solid;">{{substr($vehiculo->patente, 0, 2)}}·{{substr($vehiculo->patente, 2, 2)}}<img src="https://chilepatentes.com/images/escudo.png" width="10" height="10" border="0" alt="" />{{substr($vehiculo->patente, 4, 2)}}</td>
+															<td class="h1 pb25" style="color:#ffffff; font-family:'Helvetica', Arial,sans-serif; font-size:50px; line-height:46px; text-align:center; padding:25px;  border: white 3px solid;">{{substr($vehiculo->patente, 0, 2)}}·{{substr($vehiculo->patente, 2, 2)}}<img src="https://api.chilepatentes.com/images/escudo.png" width="10" height="10" border="0" alt="" />{{substr($vehiculo->patente, 4, 2)}}</td>
 														</tr>
 														<tr>
 															<td class="text-center pb25" style="color:#c1cddc; font-family:'Muli', Arial,sans-serif; font-size:14px; line-height:30px; text-align:center; padding-bottom:25px;">chilePatentes.com no se hace responsable del mal uso de la informacion aquí contenida.  <span class="m-hide"></span>Nuestra base de datos es actualizada periódicamente por lo que los datos del propietario podrían haber cambiado</td>
