@@ -5,6 +5,9 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
+use Symfony\Component\Process\Process;
+
+use Log;
 class Kernel extends ConsoleKernel
 {
     /**
@@ -16,6 +19,13 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $process = new Process(['ps', 'aux']);
+        $process->run();
+        $output = $process->getOutput();
+
+        if (!stristr($output, "queue:work")){
+            $schedule->command('queue:work');
+        }
     }
 
     /**
