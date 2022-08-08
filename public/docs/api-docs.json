@@ -1,0 +1,32 @@
+swagger: '2.0'
+info:
+  description: LPT APis
+  version: 1.0.0
+  title: Consultar Patentes Chile API's
+basePath: /api/
+tags:
+  - name: Category
+    description: Manage Category
+
+paths:
+  /getDataByPatent:
+    get:
+      tags:
+        - Category
+      summary: getDataByPatent
+      description: 'Obtener información por patente'
+      operationId: createCategory
+      parameters:
+        - in: query
+          name: patent
+          type: string
+          required: true 
+         
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - api_key: [] 
+
