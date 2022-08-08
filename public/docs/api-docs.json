@@ -12,10 +12,10 @@ paths:
   /getDataByPatent:
     get:
       tags:
-        - Category
+        - Patentes
       summary: getDataByPatent
       description: 'Obtener información por patente'
-      operationId: createCategory
+      operationId: getDataByPatent
       parameters:
         - in: query
           name: patent
