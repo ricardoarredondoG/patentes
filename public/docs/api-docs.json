@@ -5,8 +5,8 @@ info:
   title: Consultar Patentes Chile API's
 basePath: /api/
 tags:
-  - name: Category
-    description: Manage Category
+  - name: Patentes
+    description: Administrador de API's Patentes
 
 paths:
   /getDataByPatent:
